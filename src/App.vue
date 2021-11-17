@@ -1,32 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <TheHeader />
+
     <router-view />
+
+    <TheFooter />
+    <TheLoginForm />
+    <TheSignupForm />
   </div>
 </template>
 
+<script>
+import TheHeader from '@/components/___template/TheHeader';
+import TheFooter from '@/components/___template/TheFooter';
+import TheLoginForm from '@/components/___template/TheLoginForm';
+import TheSignupForm from '@/components/___template/TheSignupForm';
+
+export default {
+  name: 'App',
+  components: {
+    TheHeader,
+    TheFooter,
+    TheLoginForm,
+    TheSignupForm
+  }
+}
+
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  /* @import './assets/css/spinner.css';
+  @import './assets/css/bootstrap.min.css';
+  @import './assets/css/bootstrap-select.min.css';
+  @import './assets/css/jquery-ui-date.css';
+  @import './assets/css/fullcalendar.css';
+  @import './assets/css/slick.css';
+  @import './assets/css/color.css';
+  @import './assets/css/style.css'; */
 </style>
